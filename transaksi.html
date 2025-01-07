@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaksi Peminjaman Buku</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        #message {
+            font-size: 1.2em;
+            color: green;
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">Sasa e-Library</h1>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About Us</a></li>
+                    <li><a href="login.html" class="nav-link">Login</a></li>
+                    <li><a href="transaksi.html" class="nav-link">Payment</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+<body>
+    <div class="container mt-5">
+        <h2 class="text-center">Transaksi Peminjaman Buku</h2>
+        <form id="loanForm">
+            <div class="form-group">
+                <label for="name">Nama Peminjam</label>
+                <input type="text" class="form-control" id="name" required>
+            </div>
+            <div class="form-group">
+                <label for="bookTitle">Judul Buku</label>
+                <input type="text" class="form-control" id="bookTitle" required>
+            </div>
+            <div class="form-group">
+                <label for="loanDate">Tanggal Peminjaman</label>
+                <input type="date" class="form-control" id="loanDate" required>
+            </div>
+            <div class="form-group">
+                <label for="returnDate">Tanggal Pengembalian</label>
+                <input type="date" class="form-control" id="returnDate" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Pinjam Buku</button>
+        </form>
+        <div id="message" class="mt-3"></div>
+    </div>
+
+    <script>
+        document.getElementById('loanForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const bookTitle = document.getElementById('bookTitle').value;
+            const loanDate = document.getElementById('loanDate').value;
+            const returnDate = document.getElementById('returnDate').value;
+
+            window.location.href = 'proses.html';
+        });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Sasa e-Library. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

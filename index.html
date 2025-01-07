@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UAS Pemrograman Web</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<header class="header"></header>
+<div class="container">
+    <h1 class="logo">Sasa e-Library</h1>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="about.html" class="nav-link">About Us</a></li>
+            <li><a href="login.html" class="nav-link">Login</a></li>
+            <li><a href="transaksi.html" class="nav-link">Payment</a></li>
+        </ul>
+    </nav>
+</div>
+</header>
+
+<body>
+    <div class="container">
+        <div class="card-container">
+            <div class="card">
+                <img src="images/photo1.jpg" alt="Photo 1">
+                <div class="card-content">
+                    <h3>management information systems</h3>
+                    <p>Managing the Digital Firm provides the most comprehensive overview of information
+                        systems used by business firms today</p>
+                    <a href="#" class="btn read-more-btn">Read More</a>
+                    <div class="hidden-content">
+                        <p>Managing the Digital Firm provides the most comprehensive overview of information
+                            systems used by business firms today, while drawing connections between MIS and business
+                            performance. The Laudons are known for their outstanding real-world case studies, which
+                            describe how well-known companies use IT to solve problems and achieve business objectives.
+                            Students develop sought-after skills, such as leading IS-related management discussions and
+                            using IT to meet bottom-line results. Each chapter of the 16th edition features all-new
+                            Interactive Sessions, new Video Cases, and a new Career Opportunities section building
+                            practical job-seeking skills.Also available with MyLab MISMyLab(tm) is the teaching and
+                            learning platform that empowers you to reach every student. By combining trusted author
+                            content with digital tools and a flexible platform, MyLab personalizes the learning
+                            experience and improves results for each student, who will also learn how MIS concepts will
+                            help them succeed in their future careers. Learn more about MyLab MIS.Plus, give students
+                            anytime, anywhere access with Pearson eTextPearson eText is a simple-to-use,
+                            mobile-optimized, personalized reading experience available within MyLab. It lets students
+                            highlight, take notes, and review key vocabulary all in one place -- even when offline. For
+                            instructors not using MyLab, Pearson eText can also be adopted on its own as the main course
+                            material. Learn more about Pearson eText or contact your Pearson rep for purchase options.
+                        </p>
+                        <a href="#" class="btn read-less-btn">Read Less</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-container">
+            <div class="card">
+                <img src="images/photo2.jpg" alt="Photo 2">
+                <div class="card-content">
+                    <h3>Artificial Intelligence in Information and Communication Technologies, Healthcare and
+                        Education</h3>
+                    <p>A Roadmap Ahead is designed as a reference text and discusses
+                        inter-dependability</p>
+                    <a href="#" class="btn read-more-btn">Read More</a>
+                    <div class="hidden-content">
+                        <p>A Roadmap Ahead is designed as a reference text and discusses
+                            inter-dependability, communication and effective control for the betterment of services
+                            through artificial intelligence (AI), as well as the challenges and path ahead for AI in
+                            computing and control across different domains of business and human life. The book
+                            accommodates technologies and application domains including backbone hardware, systems and
+                            methods for deployment, which help incorporating intelligence through different supervised
+                            and probabilistic learning approaches.
+                        </p>
+                        <a href="#" class="btn read-less-btn">Read Less</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-container">
+            <div class="card">
+                <img src="images/photo3.jpg" alt="Photo 3">
+                <div class="card-content">
+                    <h3>sistem informasi geografis berbasis web</h3>
+                    <p>Buku tentang ilmu hukum dan komputer yang berjudul Sistem Informasi Geografis Berbasis Web
+                        (Teori dan Implementasi Aplikasi)</p>
+                    <a href="#" class="btn read-more-btn">Read More</a>
+                    <div class="hidden-content">
+                        <p>Buku tentang ilmu hukum dan komputer yang berjudul Sistem Informasi Geografis Berbasis Web
+                            (Teori dan Implementasi Aplikasi) merupakan buku karya Anik Vega Vitianingsih … 
+                            Penulisan buku ini bertujuan untuk pengenalan lebih lanjut bagi siswa maupun mahasiswa, agar
+                            dapat memahami lebih dalam lagi tentang bagaimana penggunaan GIS dengan benar, berdasarkan
+                            step by step proses yang dilakukan sehingga menghasilkan tampilan GIS berbasis web yang
+                            dapat memudahkan pengguna. Secara global buku ini mengupas tentang cara penggunaan aplikasi
+                            GIS, mulai dari instalasi, menghubungkan antara Arcgis dan SQL Server serta Arcgis dengan
+                            WEB yang bisa diakses oleh semua orang.</p>
+                        <a href="#" class="btn read-less-btn">Read Less</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Sasa e-Library. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        // Menangani tombol "Read More" dan "Read Less"
+        document.querySelectorAll('.read-more-btn').forEach(button => {
+            button.addEventListener('click', function(event) {
+                event.preventDefault();
+                const hiddenContent = this.nextElementSibling; // Ambil elemen berikutnya (konten tersembunyi)
+                hiddenContent.style.display = 'block'; // Tampilkan konten tambahan
+                this.style.display = 'none'; // Sembunyikan tombol "Read More"
+            });
+        });
+
+        document.querySelectorAll('.read-less-btn').forEach(button => {
+            button.addEventListener('click', function(event) {
+                event.preventDefault();
+                const hiddenContent = this.parentElement; // Ambil elemen induk (konten tersembunyi)
+                hiddenContent.style.display = 'none'; // Sembunyikan konten tambahan
+                this.parentElement.previousElementSibling.style.display = 'inline-block'; // Tampilkan kembali tombol "Read More"
+            });
+        });
+    </script>
+</body>
+
+</html>
